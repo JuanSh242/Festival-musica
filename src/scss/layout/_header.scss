@@ -1,0 +1,40 @@
+@use '../base/variables' as v;
+@use '../base/mixin' as m; 
+
+.header{
+    background-color: v.$morado;
+
+    h1{
+        color: v.$blanco;
+        text-align: center;
+        @include m.tablet{
+            margin: 0;    
+        }
+    }
+    .ContenidoCabezera{
+        padding: 2rem;
+        @include m.tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+.nav-p{
+    @include m.tablet{
+        display: flex;
+        gap: 2rem;
+    }
+    a{
+        display: block;
+        text-align: center;
+        color: v.$blanco;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+
+        &:hover{
+            color: v.$amarillo;
+        }
+    }
+}
